@@ -15,6 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.logging.SimpleFormatter;
 
@@ -74,6 +76,10 @@ public class Utility {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+    public static void clickElementJS(WebDriver driver, By locator) {
+        WebElement element = findWebElement(driver, locator);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
     public static void Scroll2(WebDriver driver, By locator)
     {
@@ -162,7 +168,7 @@ public class Utility {
      */
     //ToDo: Get TimeStamp
     public static String getTimeStamp(){
-        return new SimpleDateFormat("yyyy-MM-dd-h-m-ss-a").format(new Date());
+        return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
     }
 
 
@@ -223,7 +229,7 @@ public class Utility {
     }
 
     //Todo: Generate Egyptian National Id
-    private static String generateNationalID(int mainAge,int maxAge)
+    public static String generateNationalID(int mainAge,int maxAge)
     {
         Calendar calendar= Calendar.getInstance();
 
@@ -254,6 +260,22 @@ public class Utility {
         return generateNationalID(65,70);
     }
 
+    public static String generateNationalIdForAge(int age) {
+        LocalDate birthDate = LocalDate.now().minusYears(age);
+        int centuryDigit = (birthDate.getYear() < 2000) ? 2 : 3;
+
+        String birthDatePart = birthDate.format(DateTimeFormatter.ofPattern("yyMMdd"));
+        Random random = new Random();
+        int governorateCode = random.nextInt(27) + 1;
+        String governoratePart = String.format("%02d", governorateCode);
+
+        int uniqueIdentifier = random.nextInt(10000);
+        String uniqueIdentifierPart = String.format("%04d", uniqueIdentifier);
+
+        int checksum = 1+ random.nextInt(10);
+
+        return centuryDigit + birthDatePart + governoratePart + uniqueIdentifierPart + checksum;
+    }
     /**
      * Generates a random full name using Faker.
      */
@@ -287,10 +309,14 @@ public class Utility {
     //ToDo: generate random  Member Id
     public static String generateMemberId()
     {
-        String MemberId = String.valueOf(faker.idNumber());
+        String MemberId = String.valueOf(faker.idNumber().valid());
         return MemberId;
     }
-
+    public static String generateIdS()
+    {
+        String IDS = String.valueOf(faker.number().numberBetween(1,10000));
+        return IDS;
+    }
 
     /**
      * Generates a random Address using Faker.

@@ -1,0 +1,3 @@
+[INFO] 05-01-2025 13:50:49 [main] [Tests.TC03_MemberPage.setUp(TC03_MemberPage.java:37)] - null
+[INFO] 05-01-2025 13:50:52 [main] [Tests.TC03_MemberPage.setUp(TC03_MemberPage.java:39)] - chromedriver is opened
+[INFO] 05-01-2025 13:51:05 [main] [Tests.TC03_MemberPage.setUp(TC03_MemberPage.java:41)] - Page is redirected to URL

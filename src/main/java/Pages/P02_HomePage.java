@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilittes.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -54,6 +55,11 @@ public class P02_HomePage {
     }
 
     //Action
+    public P03_MemberPage enterMemberPage()
+    {
+        Utility.clickElement(driver,members);
+        return new P03_MemberPage(driver);
+    }
 
     //Assertions
 

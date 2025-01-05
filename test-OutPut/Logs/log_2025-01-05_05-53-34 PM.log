@@ -1,0 +1,5 @@
+[INFO] 05-01-2025 17:53:34 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:42)] - null
+[INFO] 05-01-2025 17:53:43 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - chromedriver is opened
+[INFO] 05-01-2025 17:53:52 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - Page is redirected to URL
+[INFO] 05-01-2025 17:53:53 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingMemberStarted
+[INFO] 05-01-2025 17:54:07 [main] [Listeners.iTestResultListenersClass.onTestSuccess(iTestResultListenersClass.java:13)] - Test CaseValidAddingMemberPassed
