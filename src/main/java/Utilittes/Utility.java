@@ -260,6 +260,17 @@ public class Utility {
         return generateNationalID(65,70);
     }
 
+    public static String generateDynamicBirthDate(int mainAge,int maxAge){
+        LocalDate currentDate =LocalDate.now();
+        int maxBirthYear =currentDate.getYear()- mainAge;
+        int minBirthYear =currentDate.getYear()- maxAge;
+        int randomYear=maxBirthYear +random.nextInt(maxBirthYear-minBirthYear +1);
+        int randomMonth =1+ random.nextInt(12);
+        int randomDay =1+ random.nextInt(30);
+        LocalDate birthDate =LocalDate.of(randomYear,randomMonth,randomDay);
+        return birthDate.toString();
+    }
+
     public static String generateNationalIdForAge(int age) {
         LocalDate birthDate = LocalDate.now().minusYears(age);
         int centuryDigit = (birthDate.getYear() < 2000) ? 2 : 3;
@@ -291,7 +302,7 @@ public class Utility {
     //ToDo: generate random  name
     public static String generateName()
     {
-        String Name =faker.name().name();
+        String Name =faker.name().fullName();
         return Name;
     }
     /**
@@ -324,7 +335,7 @@ public class Utility {
     //ToDo: generate random  Adress
     public static String generateAddress()
     {
-        String Address =faker.address().fullAddress();
+        String Address =faker.address().secondaryAddress();
         return Address;
     }
 

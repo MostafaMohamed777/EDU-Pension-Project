@@ -11,7 +11,7 @@ public class P01_LoginPage {
     private final By userName=By.cssSelector("[placeholder=\"اسم المستخدم\"]");
     private final By password=By.cssSelector("[placeholder=\"كلمة المرور\"]");
     private final By loginBtn=By.cssSelector("[type=\"submit\"]");
-    private final By successMassage = By.xpath("//*[@id=\"swal2-html-container\"]");
+
 
     //variables
     private WebDriver driver;

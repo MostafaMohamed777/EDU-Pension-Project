@@ -1,8 +1,10 @@
 package Tests;
 
 import Pages.P01_LoginPage;
+import Pages.P04_AddNewMember;
 import Utilittes.DataUtils;
 import Utilittes.LogsUtils;
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -48,6 +50,7 @@ public class TC04_AddingMember {
                 implicitlyWait(Duration.ofSeconds(5));
     }
     @Test
+    @Description("Adding Member End Work reason Coming of age (Age = 60)")
     public void ValidAddingMember() throws IOException {
         new P01_LoginPage(getDriver())
                 .enterUserName(userName)
@@ -66,11 +69,11 @@ public class TC04_AddingMember {
                 .chooseSubSyndicate()
                 .enterRegisterNumber()
                 .enterFileNumber()
-                .enterFileDate();
-               // .ConfirmAddingMember();
-        Assert.assertTrue(new P01_LoginPage(getDriver()).
-                assertHomePage(getPropertyValue("Environments.properties", "MemberPage_Url")));
+                .enterFileDate()
+                .ConfirmAddingMember();
+        Assert.assertTrue(new P04_AddNewMember(getDriver()).assertSuccessfulMassage());
     }
+
     @Test
     public void ValidOpenFiltersPage() throws IOException {
         new P01_LoginPage(getDriver())
@@ -79,6 +82,30 @@ public class TC04_AddingMember {
                 .enterLoginBtn()
                 .enterMemberPage()
                 .enterFilterBtn();
+    }
+    @Test
+    @Description("Adding Member End Work reason Coming of age (Age = 60)")
+    public void ValidAddingDeathMember() throws IOException {
+        new P01_LoginPage(getDriver())
+                .enterUserName(userName)
+                .enterPassword(password)
+                .enterLoginBtn()
+                .enterMemberPage()
+                .enterAddNewMember()
+                .enterUserName()
+                .enterPhoneNumber()
+                .enterNationalId()
+                .enterAddress()
+                .enterNote()
+                .enterSyndicate()
+                .chooseSyndicate()
+                .enterSubSyndicate()
+                .chooseSubSyndicate()
+                .enterRegisterNumber()
+                .enterFileNumber()
+                .enterFileDate();
+                //.ConfirmAddingMember();
+        Assert.assertTrue(new P04_AddNewMember(getDriver()).assertSuccessfulMassage());
     }
 
     @AfterMethod

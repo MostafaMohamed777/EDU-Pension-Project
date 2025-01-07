@@ -1,0 +1,6 @@
+[INFO] 05-01-2025 23:04:58 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:43)] - null
+[INFO] 05-01-2025 23:05:01 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:45)] - chromedriver is opened
+[INFO] 05-01-2025 23:05:06 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:47)] - Page is redirected to URL
+[INFO] 05-01-2025 23:05:06 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingMemberStarted
+[INFO] 05-01-2025 23:05:21 [main] [Pages.P04_AddNewMember.getSuccessfulMassage(P04_AddNewMember.java:131)] - Massage is :تم بنجاح
+[INFO] 05-01-2025 23:05:21 [main] [Listeners.iTestResultListenersClass.onTestSuccess(iTestResultListenersClass.java:13)] - Test CaseValidAddingMemberPassed
