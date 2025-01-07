@@ -1,0 +1,10 @@
+[INFO] 07-01-2025 23:26:12 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - null
+[INFO] 07-01-2025 23:26:14 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - chromedriver is opened
+[INFO] 07-01-2025 23:26:20 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:48)] - Page is redirected to URL
+[INFO] 07-01-2025 23:26:20 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingDeathMemberStarted
+[INFO] 07-01-2025 23:26:39 [main] [Utilittes.Utility.saveData(Utility.java:392)] - EndWorkDatesaved with value:2023-03-02
+[INFO] 07-01-2025 23:26:39 [main] [Pages.P04_AddNewMember.enterEnd_work_date(P04_AddNewMember.java:135)] - the generated EndWorkDate  is =2023-03-02
+[INFO] 07-01-2025 23:26:40 [main] [Utilittes.Utility.getData(Utility.java:406)] - Retrieved EndWorkDate with value: 2023-03-02
+[INFO] 07-01-2025 23:26:40 [main] [Pages.P04_AddNewMember.enterDeathDate(P04_AddNewMember.java:144)] - the generated deathDate  is =2023-03-02
+[INFO] 07-01-2025 23:26:43 [main] [Pages.P04_AddNewMember.getSuccessfulMassage(P04_AddNewMember.java:188)] - Massage is :تم بنجاح
+[INFO] 07-01-2025 23:26:43 [main] [Listeners.iTestResultListenersClass.onTestSuccess(iTestResultListenersClass.java:13)] - Test CaseValidAddingDeathMemberPassed

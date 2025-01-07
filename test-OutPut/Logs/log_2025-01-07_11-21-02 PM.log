@@ -1,0 +1,9 @@
+[INFO] 07-01-2025 23:21:02 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - null
+[INFO] 07-01-2025 23:21:05 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - chromedriver is opened
+[INFO] 07-01-2025 23:21:12 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:48)] - Page is redirected to URL
+[INFO] 07-01-2025 23:21:12 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingDeathMemberStarted
+[INFO] 07-01-2025 23:21:31 [main] [Utilittes.Utility.saveData(Utility.java:392)] - EndWorkDatesaved with value:1995-10-18
+[INFO] 07-01-2025 23:21:31 [main] [Pages.P04_AddNewMember.enterEnd_work_date(P04_AddNewMember.java:135)] - the generated EndWorkDate  is =1995-10-18
+[INFO] 07-01-2025 23:21:32 [main] [Utilittes.Utility.getData(Utility.java:406)] - Retrieved EndWorkDate with value: 1995-10-18
+[INFO] 07-01-2025 23:21:32 [main] [Pages.P04_AddNewMember.enterDeathDate(P04_AddNewMember.java:144)] - the generated deathDate  is =1995-10-18
+[INFO] 07-01-2025 23:21:38 [main] [Listeners.iInvokedMethodListenersClass.afterInvocation(iInvokedMethodListenersClass.java:22)] - Test CaseValidAddingDeathMemberfailed

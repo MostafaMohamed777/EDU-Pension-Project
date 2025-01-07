@@ -1,0 +1,5 @@
+[INFO] 07-01-2025 23:06:51 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - null
+[INFO] 07-01-2025 23:07:01 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - chromedriver is opened
+[INFO] 07-01-2025 23:07:07 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:48)] - Page is redirected to URL
+[INFO] 07-01-2025 23:07:07 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingDeathMemberStarted
+[INFO] 07-01-2025 23:07:25 [main] [Listeners.iInvokedMethodListenersClass.afterInvocation(iInvokedMethodListenersClass.java:22)] - Test CaseValidAddingDeathMemberfailed

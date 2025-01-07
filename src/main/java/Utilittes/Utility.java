@@ -136,7 +136,7 @@ public class Utility {
      */
     //Todo: selecting from drop Down
     public static void selectingFromDropDown(WebDriver driver,By locator,String option){
-        new Select(findWebElement(driver,locator)).deselectByVisibleText(option);
+        new Select(findWebElement(driver,locator)).selectByVisibleText(option);
     }
 
     // ======================= Screenshot Utility ======================= //

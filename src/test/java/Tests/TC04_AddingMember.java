@@ -103,10 +103,18 @@ public class TC04_AddingMember {
                 .chooseSubSyndicate()
                 .enterRegisterNumber()
                 .enterFileNumber()
-                .enterFileDate();
-                //.ConfirmAddingMember();
+                .enterEndWorkId()
+                .selectEndWorkID()
+                .enterEnd_work_date()
+                .enterFileDate()
+                .enterDeathDate()
+                .enterFile_number_wrasa()
+                .enterDate_file_Wrasa()
+                .enterVerifyWarasa()
+                .ConfirmAddingMember();
         Assert.assertTrue(new P04_AddNewMember(getDriver()).assertSuccessfulMassage());
     }
+
 
     @AfterMethod
     public void quit() {

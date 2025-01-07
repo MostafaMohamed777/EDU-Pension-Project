@@ -1,0 +1,1 @@
+{"uuid":"9750e7e8-ec7d-4279-a487-b18bb4bb7c7f","name":"Tests.TC04_AddingMember.quit","children":["a42640e6-f05c-4d72-a0fd-40295a06708d"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736284898566,"stop":1736284898566}],"start":1736284898565,"stop":1736284898566}

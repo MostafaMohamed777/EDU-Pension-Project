@@ -120,9 +120,13 @@ public class P04_AddNewMember {
         Utility.clickElement(driver, end_work_id);
         return this;
     }
+    public P04_AddNewMember selectEndWorkID() {
+        Utility.selectingFromDropDown(driver, end_work_id, " وفاه ");
+        return this;
+    }
 
     public P04_AddNewMember enterEnd_work_date() {
-        String endWorkDate = Utility.generateDynamicBirthDate(60, 65);
+        String endWorkDate = Utility.generateDynamicBirthDate(30, 59);
         try {
             Utility.saveData("EndWorkDate", endWorkDate);
         } catch (IOException e) {
@@ -133,13 +137,11 @@ public class P04_AddNewMember {
         return this;
     }
 
-    public P04_AddNewMember selectEndWorkID() {
-        Utility.selectingFromDropDown(driver, end_work_id, " وفاه ");
-        return this;
-    }
 
-    public P04_AddNewMember enterEndDeathDate() {
+
+    public P04_AddNewMember enterDeathDate() {
         String deathDate = Utility.getData("EndWorkDate");
+        LogsUtils.info("the generated deathDate  is =" + deathDate);
         Utility.sendData(driver, death_date, deathDate);
         return this;
     }
@@ -170,6 +172,7 @@ public class P04_AddNewMember {
 
     public P04_AddNewMember enterVerifyWarasa()
     {
+        Utility.scrollToElement(driver,verifyWarasa);
         Utility.clickElement(driver,verifyWarasa);
         return this;
     }
