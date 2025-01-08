@@ -1,0 +1,1 @@
+{"uuid":"6ab8ff6b-a2fd-4de5-b484-0ef0fe8c712f","name":"Tests.TC04_AddingMember.setUp","children":["987b91fc-62fb-439c-bcd7-451cda9e06f1"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736337100956,"stop":1736337115620}],"afters":[],"start":1736337100955,"stop":1736337115620}

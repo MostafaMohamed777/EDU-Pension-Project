@@ -1,0 +1,1 @@
+{"uuid":"e8b5581e-6b09-408e-bcfa-2f2335a36d46","name":"Tests.TC05_AddingInheritors.quit","children":["fc664a7b-9891-48aa-a73f-d01f0dfeaab2"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736364503570,"stop":1736364503571}],"start":1736364503570,"stop":1736364503571}

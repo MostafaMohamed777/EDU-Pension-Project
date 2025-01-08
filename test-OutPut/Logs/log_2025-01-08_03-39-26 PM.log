@@ -1,0 +1,5 @@
+[INFO] 08-01-2025 15:39:26 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:42)] - null
+[INFO] 08-01-2025 15:39:28 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - chromedriver is opened
+[INFO] 08-01-2025 15:39:34 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - Page is redirected to URL
+[INFO] 08-01-2025 15:39:34 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseinValidAddingMemberStarted
+[INFO] 08-01-2025 15:39:52 [main] [Listeners.iInvokedMethodListenersClass.afterInvocation(iInvokedMethodListenersClass.java:22)] - Test CaseinValidAddingMemberfailed

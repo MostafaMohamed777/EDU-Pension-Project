@@ -1,0 +1,10 @@
+[INFO] 08-01-2025 22:09:39 [main] [Tests.TC05_AddingInheritors.setUp(TC05_AddingInheritors.java:43)] - null
+[INFO] 08-01-2025 22:09:41 [main] [Tests.TC05_AddingInheritors.setUp(TC05_AddingInheritors.java:45)] - chromedriver is opened
+[INFO] 08-01-2025 22:09:58 [main] [Tests.TC05_AddingInheritors.setUp(TC05_AddingInheritors.java:47)] - Page is redirected to URL
+[INFO] 08-01-2025 22:09:58 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseValidAddingDeathMemberWithInheritorsFullCycleStarted
+[INFO] 08-01-2025 22:10:16 [main] [Utilittes.Utility.saveData(Utility.java:395)] - EndWorkDatesaved with value:2002-12-20
+[INFO] 08-01-2025 22:10:16 [main] [Pages.P04_AddNewMember.enterEnd_work_date(P04_AddNewMember.java:136)] - the generated EndWorkDate  is =2002-12-20
+[INFO] 08-01-2025 22:10:17 [main] [Utilittes.Utility.getData(Utility.java:409)] - Retrieved EndWorkDate with value: 2002-12-20
+[INFO] 08-01-2025 22:10:17 [main] [Pages.P04_AddNewMember.enterDynamicDeathDate(P04_AddNewMember.java:145)] - the generated deathDate  is =2002-12-20
+[INFO] 08-01-2025 22:10:48 [main] [Pages.P05_AddingInheritors.getSuccessfulMassage(P05_AddingInheritors.java:123)] - Successful Massage IS =By.xpath: //*[@id="swal2-html-container"]
+[INFO] 08-01-2025 22:10:48 [main] [Listeners.iTestResultListenersClass.onTestSuccess(iTestResultListenersClass.java:13)] - Test CaseValidAddingDeathMemberWithInheritorsFullCyclePassed

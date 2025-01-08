@@ -138,6 +138,9 @@ public class Utility {
     public static void selectingFromDropDown(WebDriver driver,By locator,String option){
         new Select(findWebElement(driver,locator)).selectByVisibleText(option);
     }
+    public static void selectingFromDropDownUsingValue(WebDriver driver,By locator,String value){
+        new Select(findWebElement(driver,locator)).selectByValue(value);
+    }
 
     // ======================= Screenshot Utility ======================= //
 
@@ -302,7 +305,7 @@ public class Utility {
     //ToDo: generate random  name
     public static String generateName()
     {
-        String Name =faker.name().fullName();
+        String Name =faker.name().nameWithMiddle();
         return Name;
     }
     /**

@@ -1,0 +1,8 @@
+[INFO] 08-01-2025 16:29:08 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:42)] - null
+[INFO] 08-01-2025 16:29:11 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:44)] - chromedriver is opened
+[INFO] 08-01-2025 16:29:15 [main] [Tests.TC04_AddingMember.setUp(TC04_AddingMember.java:46)] - Page is redirected to URL
+[INFO] 08-01-2025 16:29:16 [main] [Listeners.iTestResultListenersClass.onTestStart(iTestResultListenersClass.java:9)] - Test CaseInValidAddingDeathMemberStarted
+[INFO] 08-01-2025 16:29:35 [main] [Utilittes.Utility.saveData(Utility.java:392)] - EndWorkDatesaved with value:2000-08-08
+[INFO] 08-01-2025 16:29:35 [main] [Pages.P04_AddNewMember.enterEnd_work_date(P04_AddNewMember.java:136)] - the generated EndWorkDate  is =2000-08-08
+[INFO] 08-01-2025 16:29:38 [main] [Pages.P04_AddNewMember.getNewErrorMassage(P04_AddNewMember.java:206)] - Massage is :تاريخ الوفاه لا يساوي تاريخ انهاء الخدمه
+[INFO] 08-01-2025 16:29:38 [main] [Listeners.iTestResultListenersClass.onTestSuccess(iTestResultListenersClass.java:13)] - Test CaseInValidAddingDeathMemberPassed

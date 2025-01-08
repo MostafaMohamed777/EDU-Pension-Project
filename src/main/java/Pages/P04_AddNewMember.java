@@ -4,7 +4,6 @@ import Utilittes.LogsUtils;
 import Utilittes.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
@@ -33,6 +32,8 @@ public class P04_AddNewMember {
     private final By verifyWarasa = By.id("verify_warasa");
     private final By confirmAddMember = By.cssSelector("[type=\"submit\"]");
     private final By successMassage = By.xpath("//*[@id=\"swal2-html-container\"]");
+    private final By errorMassage = By.xpath("//app-members-form//div[4]/div[2]");
+    private final By deathErrorMassage = By.xpath("//app-members-form//div[4]/div[2]");
 
     //variables
     private final WebDriver driver;
@@ -57,9 +58,9 @@ public class P04_AddNewMember {
         return this;
     }
 
-    public P04_AddNewMember enterNationalId() {
+    public P04_AddNewMember enterNationalId(int age) {
         Utility.scrollToElement(driver, nationalId);
-        String NationalId = Utility.generateNationalIdForAge(60);
+        String NationalId = Utility.generateNationalIdForAge(age);
         Utility.sendData(driver, nationalId, NationalId);
         return this;
     }
@@ -125,8 +126,8 @@ public class P04_AddNewMember {
         return this;
     }
 
-    public P04_AddNewMember enterEnd_work_date() {
-        String endWorkDate = Utility.generateDynamicBirthDate(30, 59);
+    public P04_AddNewMember enterEnd_work_date(int minAge,int maxAge) {
+        String endWorkDate = Utility.generateDynamicBirthDate(minAge, maxAge);
         try {
             Utility.saveData("EndWorkDate", endWorkDate);
         } catch (IOException e) {
@@ -139,9 +140,14 @@ public class P04_AddNewMember {
 
 
 
-    public P04_AddNewMember enterDeathDate() {
+    public P04_AddNewMember enterDynamicDeathDate() {
         String deathDate = Utility.getData("EndWorkDate");
         LogsUtils.info("the generated deathDate  is =" + deathDate);
+        Utility.sendData(driver, death_date, deathDate);
+        return this;
+    }
+    public P04_AddNewMember enterManuelDeathDate(int minAge,int maxAge) {
+        String deathDate = Utility.generateDynamicBirthDate(minAge, maxAge);
         Utility.sendData(driver, death_date, deathDate);
         return this;
     }
@@ -182,18 +188,43 @@ public class P04_AddNewMember {
         Utility.clickElement(driver,confirmAddMember);
         return this;
     }
+    public P05_AddingInheritors ConfirmAddingDeathMember()
+    {
+        Utility.scrollToElement(driver,confirmAddMember);
+        Utility.clickElement(driver,confirmAddMember);
+        return new P05_AddingInheritors(driver);
+    }
     public String getSuccessfulMassage()
     {
         String successfulMassage =Utility.getText(driver,successMassage);
         LogsUtils.info("Massage is :"+ successfulMassage);
         return successfulMassage;
     }
+    public String getErrorMassage()
+    {
+        String ErrorMassage =Utility.getText(driver,errorMassage);
+        LogsUtils.info("Massage is :"+ ErrorMassage);
+        return ErrorMassage;
+    }
+    public String getNewErrorMassage()
+    {
+        String ErrorMassage =Utility.getText(driver,deathErrorMassage);
+        LogsUtils.info("Massage is :"+ ErrorMassage);
+        return ErrorMassage;
+    }
+
 
 
     //Assertions
     public boolean assertSuccessfulMassage()
     {
         return  getSuccessfulMassage().equals("تم بنجاح");
+    }
+    public boolean assertAgeErrorMassage() {
+        return  getErrorMassage().equals(" تاريخ انهاء الخدمه يجب أن يكون تاريخا سابقا أو مطابقا للتاريخ today ");
+    }
+    public boolean assertDeathDateErrorMassage() {
+        return  getNewErrorMassage().equals(" تاريخ الوفاه لا يساوي تاريخ انهاء الخدمه ");
     }
 
 }
